@@ -1,5 +1,5 @@
 ---
-const name = Astro.url.searchParams.get('name') || '';
+const name = Astro.url.searchParams.get('name') || 'dns';
 ---
 
 <html lang="en">
@@ -8,7 +8,7 @@ const name = Astro.url.searchParams.get('name') || '';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Is it {name}?</title>
 		<style>
 			.body {
 				font-family: sans-serif;
@@ -37,6 +37,6 @@ const name = Astro.url.searchParams.get('name') || '';
 	</head>
 	<body class="body">
 		<h2 class="green">YES</h2>
-		<i>It's {name}</i>
+		<i>It's always {name}</i>
 	</body>
 </html>
