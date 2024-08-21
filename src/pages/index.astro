@@ -1,5 +1,5 @@
 ---
-
+const name = Astro.url.searchParams.get('name') || '';
 ---
 
 <html lang="en">
@@ -9,8 +9,34 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<style>
+			.body {
+				font-family: sans-serif;
+				text-align: center;
+				height: 100vh;
+				width: 100vw;
+				background-color: #000;
+				color: white;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.green {
+				color: green;
+			}
+			h2 {
+				font-size: 6rem;
+				font-weight: 900;
+			}
+			i {
+				font-size: 1.5rem;
+				font-weight: 100;
+			}
+			</style>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="body">
+		<h2 class="green">YES</h2>
+		<i>It's {name}</i>
 	</body>
 </html>
