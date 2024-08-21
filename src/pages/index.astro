@@ -1,42 +1,44 @@
 ---
-const name = Astro.url.searchParams.get('name') || 'dns';
+const name = Astro.url.searchParams.get("name") || "dns";
+const title = `Is it ${name}?`;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Is it {name}?</title>
-		<style>
-			.body {
-				font-family: sans-serif;
-				text-align: center;
-				height: 100vh;
-				width: 100vw;
-				background-color: #000;
-				color: white;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-			}
-			.green {
-				color: green;
-			}
-			h2 {
-				font-size: 6rem;
-				font-weight: 900;
-			}
-			i {
-				font-size: 1.5rem;
-				font-weight: 100;
-			}
-			</style>
-	</head>
-	<body class="body">
-		<h2 class="green">YES</h2>
-		<i>It's always {name}</i>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <style>
+      .body {
+        font-family: sans-serif;
+        text-align: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: #000;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .green {
+        color: green;
+      }
+      h2 {
+        font-size: 6rem;
+        font-weight: 900;
+      }
+      i {
+        font-size: 1.5rem;
+        font-weight: 100;
+      }
+    </style></head
+  >
+
+  <body class="body">
+    <h2 class="green">YES</h2>
+    <i>It's always <strong>{name}</strong></i>
+  </body>
 </html>
